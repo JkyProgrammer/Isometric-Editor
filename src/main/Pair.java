@@ -1,8 +1,8 @@
 package main;
 
 public class Pair<T1, T2> {
-	T1 a;
-	T2 b;
+	public T1 a;
+	public T2 b;
 	
 	public Pair (T1 aa, T2 bb) {
 		a = aa;

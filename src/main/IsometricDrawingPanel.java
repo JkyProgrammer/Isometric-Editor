@@ -125,6 +125,7 @@ public class IsometricDrawingPanel extends JPanel {
 	}
 
 	public void paintObject (Object o) {
+		repaint ();
 		int x1 = 0;
 		int y1 = 0;
 		int x2 = 0;
@@ -143,6 +144,13 @@ public class IsometricDrawingPanel extends JPanel {
 			y1 = rect.y;
 			y2 = rect.y + rect.height;
 		}
+		
+		x1 = x1 + (getWidth()/2);
+		y1 = (getHeight()/2) - y1;
+		
+		x2 = x2 + (getWidth()/2);
+		y2 = (getHeight()/2) - y2;
+		
 		
 		repaint (x1, y1, x2-x1, y2-y1);
 	}
